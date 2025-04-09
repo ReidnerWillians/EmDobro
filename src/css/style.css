@@ -24,11 +24,10 @@ main .personagem.imagem {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: 100vh;
     max-width: 380px;
-    padding: 20px;
+    z-index: 1;
 }
 
 .conteudo .nome-personagem {
@@ -43,7 +42,6 @@ main .personagem.imagem {
     color: #fff;
     font-family: "roboto";
     font-size: 16px;
-    font-weight: 300;
     line-height: 22px;
     text-align: justify;
 }
