@@ -14,39 +14,51 @@ OBJETIVO 2 - quando clicar no botão do personagem mostrar as informações do p
 */
 
 
+const botoes = document.querySelectorAll(".botao")
 
-const botoes = document.querySelectorAll(".botao"); // Objetivo 1
-const personagens = document.querySelectorAll(".personagem"); // Objetivo 2
+botoes.forEach((botao) => {
+	botao.addEventListener("click", () => {
+		selecionarBotao(botao)
+	})
+})
+
+function selecionarBotao(botao) {
+	botao.classList.add("selecionado")
+}
+
+
+/*const botoes = document.querySelectorAll(".botao") // Objetivo 1
+const personagens = document.querySelectorAll(".personagem") // Objetivo 2
 
 botoes.forEach((botao, indice) => {
 	botao.addEventListener("click", () => {
-		removerSelecaoBotao();
-		selecionarBotao(botao);
+		removerSelecaoBotao()
+		selecionarBotao(botao)
 
-		removerSelecaoPersonagem();
-		selecionarPersonagem(indice);
-	});
-});
+		removerSelecaoPersonagem()
+		selecionarPersonagem(indice)
+	})
+})
 
 function removerSelecaoBotao() {
-	const botaoSelecionado = document.querySelector(".botao.selecionado");
+	const botaoSelecionado = document.querySelector(".botao.selecionado")
 	if (botaoSelecionado) {
-		botaoSelecionado.classList.remove("selecionado");
+		botaoSelecionado.classList.remove("selecionado")
 	}
 }
 
 function selecionarBotao(botao) {
-	botao.classList.add("selecionado");
+	botao.classList.add("selecionado")
 }
 
 function removerSelecaoPersonagem() {
-	const personagemSelecionado = document.querySelector(".personagem.selecionado");
+	const personagemSelecionado = document.querySelector(".personagem.selecionado")
 	if (personagemSelecionado) {
-		personagemSelecionado.classList.remove("selecionado");
+		personagemSelecionado.classList.remove("selecionado")
 	}
 }
 
 
 function selecionarPersonagem(indice) {
-	personagens[indice].classList.add("selecionado");
-}
+	personagens[indice].classList.add("selecionado")
+}*/
