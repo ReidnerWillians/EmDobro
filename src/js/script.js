@@ -13,3 +13,40 @@ OBJETIVO 2 - quando clicar no botão do personagem mostrar as informações do p
         passo 3 - verificar se já exista um personagem selecionado, se sim, devemos remover a seleção dele 
 */
 
+
+
+const botoes = document.querySelectorAll(".botao"); // Objetivo 1
+const personagens = document.querySelectorAll(".personagem"); // Objetivo 2
+
+botoes.forEach((botao, indice) => {
+	botao.addEventListener("click", () => {
+		removerSelecaoBotao();
+		selecionarBotao(botao);
+
+		removerSelecaoPersonagem();
+		selecionarPersonagem(indice);
+	});
+});
+
+function removerSelecaoBotao() {
+	const botaoSelecionado = document.querySelector(".botao.selecionado");
+	if (botaoSelecionado) {
+		botaoSelecionado.classList.remove("selecionado");
+	}
+}
+
+function selecionarBotao(botao) {
+	botao.classList.add("selecionado");
+}
+
+function removerSelecaoPersonagem() {
+	const personagemSelecionado = document.querySelector(".personagem.selecionado");
+	if (personagemSelecionado) {
+		personagemSelecionado.classList.remove("selecionado");
+	}
+}
+
+
+function selecionarPersonagem(indice) {
+	personagens[indice].classList.add("selecionado");
+}
